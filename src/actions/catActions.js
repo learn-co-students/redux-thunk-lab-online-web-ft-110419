@@ -1,5 +1,3 @@
-// write and export your action creator function here
-import thunk from 'redux-thunk'
 export const fetchCats = () => {
     return (dispatch) => {
         dispatch({ type: 'LOADING_CATS' })

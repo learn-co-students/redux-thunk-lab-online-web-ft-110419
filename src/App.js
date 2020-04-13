@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux'
 import { fetchCats } from './actions/catActions'
 import CatList from './CatList'
@@ -9,14 +9,12 @@ class App extends React.Component {
   }
   checkLoading = () => {
     if (this.props.loading) {
-      <div>Loading...</div>
+      return <div>Processing...</div>
     } else {
-      <CatList catPics={this.props.catPics.images} />
+      return <CatList catPics={this.props.catPics} />
     }
   }
   render() {
-
-    const { catPics } = this.props
 
     return (
       <div>
